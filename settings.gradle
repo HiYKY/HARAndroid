@@ -1,0 +1,2 @@
+include ':WekaAndroid'
+include ':HARLib'
