@@ -5,14 +5,14 @@ A Human Activity Recognition Library and Demo on Android Platform.
 
 ### The Process of HAR
 The process of HAR as below diagram:
-
+```
           .------------.        .--------------.        .------------.
   Sensor  |            |        |              |        |            |activity
   Event   | SensorData |RawData | Data         |Instance| Classifier |(walking, sitting...etc)
  -------> | Collector  |------->| Preprocessor |------->|            |------->
           |            |        |              |        |            |
           '------------'        '--------------'        '------------'
-
+```
 #### Sensor Data Collect
 Collect a period of time of accelerometer sensor data on android phone. Then input an array of RawData into DataPreprocessor.
 
