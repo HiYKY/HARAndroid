@@ -6,7 +6,6 @@ import java.io.InputStream;
 
 import android.content.Context;
 
-import com.yhc.harlib.R;
 
 import weka.core.DenseInstance;
 import weka.core.Instance;

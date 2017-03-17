@@ -4,8 +4,6 @@ import java.io.InputStream;
 
 import android.content.Context;
 
-import com.yhc.harlib.R;
-
 import weka.classifiers.Classifier;
 import weka.classifiers.meta.FilteredClassifier;
 import weka.core.Instance;
