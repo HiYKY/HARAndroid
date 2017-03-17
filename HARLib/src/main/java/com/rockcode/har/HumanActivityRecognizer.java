@@ -97,6 +97,14 @@ public class HumanActivityRecognizer {
 		init(null);
 	}
 
+	/**
+	 * constructor
+	 * @param context Context
+	 * @param isKeepWake would HarLib hold the wake lock
+	 * @param runningMode har running mode, current has two mode: CLASSIFY and COLLECT
+	 * @param classifierFilePath Classifier model filepath
+	 * @param harDataListener har data listener
+	 */
 	public HumanActivityRecognizer(Context context, boolean isKeepWake, HarMode runningMode,
 	                               String classifierFilePath, HarDataListener harDataListener) {
 		mContext = context;
@@ -205,7 +213,7 @@ public class HumanActivityRecognizer {
 	/**
 	 * set HAR Classifier
 	 * @param filepath Classifier filepath
-     */
+	 * */
 	public void setClassifier(String filepath) {
 		boolean isHarRunning = mIsRunning;
 		if(isHarRunning) {
@@ -222,9 +230,8 @@ public class HumanActivityRecognizer {
 	 * @param mode HarMode.CLASSIFY or HarMode.COLLECT
 	 */
 	public void setRunningMode(HarMode mode) {
-		LogUtil.info("HumanActivityRecognizer()");
 		LogUtil.info("HarLib - HAR Current Mode: "+ mode);
-        mRunningMode = mode;
+		mRunningMode = mode;
 	}
 	
 }
