@@ -42,8 +42,12 @@ public class RawData {
      */
 	public RawData(String activity, long timestamp, float x, float y, float z) {
 		this.mActivity = activity;
-		//trans to unix timestamp
-		this.mTimeStamp = (new Date()).getTime() + (timestamp - System.nanoTime()) / 1000000L;
+		// FIXME
+		// these two method trans sensor event timestamp to unix timestamp are not the same for all phone
+//		this.mTimeStamp = (new Date()).getTime() + (timestamp - System.nanoTime()) / 1000000L;
+//		this.mTimeStamp = System.currentTimeMillis() + ((timestamp - SystemClock.elapsedRealtimeNanos())/1000000L);;
+		// use current time
+		this.mTimeStamp = System.currentTimeMillis();
 		this.mXAxisValue = x;
 		this.mYAxisValue = y;
 		this.mZAxisValue = z;
