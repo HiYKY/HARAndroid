@@ -153,6 +153,7 @@ public class HumanActivityRecognizer {
 			mWakeLock.release();
 		}
 		mIsRunning = false;
+		clear();
 		LogUtil.info("HarLib - Stop HAR");
 	}
 	

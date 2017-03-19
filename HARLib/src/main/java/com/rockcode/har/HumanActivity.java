@@ -73,6 +73,16 @@ public class HumanActivity implements Serializable, Parcelable {
 		mInstance = instance;
 	}
 
+	/**
+	 * constructor
+	 * @param startTime recognition result start time
+	 * @param activity recognition result activity
+	 */
+	public HumanActivity(long startTime, String activity) {
+		mStartTime = startTime;
+		mActivity = activity;
+	}
+
 	/***
 	 * label the activity is right
 	 * @param isRight true: right, false: wrong
@@ -90,6 +100,14 @@ public class HumanActivity implements Serializable, Parcelable {
 	 */
 	public DenseInstance getInstance() {
 		return mInstance;
+	}
+
+	/**
+	 * set Instance
+	 * @param instance Instance
+	 */
+	public void setInstance(DenseInstance instance) {
+		mInstance = instance;
 	}
 
 	@Override
