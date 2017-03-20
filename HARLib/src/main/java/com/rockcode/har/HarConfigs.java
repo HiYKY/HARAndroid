@@ -15,12 +15,12 @@ public class HarConfigs {
      */
     private static String mUserId = "0";
 
-	/**
+    /**
      * sensor collect time for one recognition cycle
      */
     private static int mSensorCollectTime = 5000;
 
-	/**
+    /**
      * sensor sample freq (times/second)
      */
     private static int mSampleFreq = 20;
@@ -41,7 +41,7 @@ public class HarConfigs {
         mDebug = isDebug;
     }
 
-	/**
+    /**
      * get sensor collect time
      * @return time(ms)
      */
@@ -73,7 +73,7 @@ public class HarConfigs {
         mSampleFreq = hz;
     }
 
-	/**
+    /**
      * get total sample number for one recognition cycle
      * @return sample number
      */
@@ -81,7 +81,7 @@ public class HarConfigs {
         return (mSensorCollectTime / 1000) * mSampleFreq;
     }
 
-	/**
+    /**
      * get least sample number for one recognition cycle
      * @return least sample number
      */
@@ -92,12 +92,12 @@ public class HarConfigs {
     /**
      * user id(can be any string), for distinguish between different users
      * @param userid
-	 */
+     */
     public static void setUserId(String userid) {
         mUserId = userid;
     }
 
-	/**
+    /**
      * get user id, for distinguish between different users
      * @return user id
      */

@@ -36,7 +36,7 @@ class SensorDataCollector {
 	 *	SensorDataCollector
 	 * @param context Context
 	 * @param sensorDataListener Sensor data Collect Listener
-     */
+	 */
 	SensorDataCollector(Context context, SensorDataListener sensorDataListener) {
 		mSensorDataListener = sensorDataListener;
 		mRawDataList = new ArrayList<>();
@@ -48,7 +48,7 @@ class SensorDataCollector {
 	/**
 	 * set label target activity on collect mode
 	 * @param activity need label activity
-     */
+	 */
 	void setLabelActivity(String activity) {
 		mActivity = activity;
 	}
@@ -56,7 +56,7 @@ class SensorDataCollector {
 	/**
 	 * start collect
 	 * @return true:success, false:failure
-     */
+	 */
 	boolean start() {
 		if(mSensorManager != null && mAcceleroMeterSensor != null) {
 			int samplingPeriodUs = (1000000 / HarConfigs.getSampleFreq());
@@ -72,7 +72,7 @@ class SensorDataCollector {
 	/**
 	 * stop collect
 	 * @return true:success, false:failure
-     */
+	 */
 	boolean stop() {
 		if(mSensorManager != null && mAcceleroMeterSensor != null) {
 			mSensorManager.unregisterListener(mSensorEventListener, mAcceleroMeterSensor);
@@ -116,8 +116,8 @@ class SensorDataCollector {
 	 * @param x	The X axis value
 	 * @param y	The Y axis value
 	 * @param z The Z axis value
-     * @return RawData
-     */
+	 * @return RawData
+	 */
 	private RawData addRawData(long timestamp, float x, float y, float z) {
 		RawData rawData = new RawData(mActivity, timestamp, x, y, z);
 		mRawDataList.add(rawData);

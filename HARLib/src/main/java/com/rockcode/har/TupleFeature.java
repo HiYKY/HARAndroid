@@ -128,7 +128,7 @@ public class TupleFeature {
 	/**
 	 * get start time
 	 * @return unix timestamp
-     */
+	 */
 	public synchronized long getStartTime() {
 		return mStartTime;
 	}
@@ -136,7 +136,7 @@ public class TupleFeature {
 	/**
 	 * get target activity
 	 * @return Activity: NoLabel, Walking, Jogging, Cycling, Stairs, Standing
-     */
+	 */
 	public synchronized String getActivity() {
 		return mActivity;
 	}
@@ -144,7 +144,7 @@ public class TupleFeature {
 	/**
 	 * set target activity
 	 * @param activity Activity: NoLabel, Walking, Jogging, Cycling, Stairs, Standing
-     */
+	 */
 	public void setActivity(String activity) {
 		mActivity = activity;
 	}
@@ -152,7 +152,7 @@ public class TupleFeature {
 	/**
 	 * get userid
 	 * @return userid
-     */
+	 */
 	public String getUserId() {
 		return mUserid;
 	}
@@ -160,7 +160,7 @@ public class TupleFeature {
 	/**
 	 * set RawData List
 	 * @param rawDataList RawData list
-     */
+	 */
 	public synchronized void setRawData(List<RawData> rawDataList) {
 		int len = rawDataList.size();
 		mXAxisValues = new float[len];
@@ -218,7 +218,7 @@ public class TupleFeature {
 	/**
 	 * get rawdata count
 	 * @return count
-     */
+	 */
 	public synchronized int getCount() {
 		return mCount;
 	}

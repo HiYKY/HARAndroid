@@ -10,7 +10,7 @@ interface SensorDataListener {
 	/**
 	 * On SensorDataCollector finish one cycle data collect
 	 * @param rawDataList Collected raw sensor data list
-     */
+	 */
 	void onSensorDataChange(List<RawData> rawDataList);
 
 }

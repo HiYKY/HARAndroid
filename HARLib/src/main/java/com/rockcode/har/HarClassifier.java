@@ -36,7 +36,7 @@ class HarClassifier {
 	HarClassifier(Context context, Instances instances){
 		mContext = context;
 		mInstances = instances;
-        setDefaultClassifier();
+		setDefaultClassifier();
 	}
 
 	/**
@@ -45,11 +45,11 @@ class HarClassifier {
 	 * @param instances Weka Instalces
 	 * @param classifierFilePath Classifier model filepath
 	 */
-    HarClassifier(Context context, Instances instances, String classifierFilePath) {
-        mContext = context;
-        mInstances = instances;
-        setClassifier(classifierFilePath);
-    }
+	HarClassifier(Context context, Instances instances, String classifierFilePath) {
+		mContext = context;
+		mInstances = instances;
+		setClassifier(classifierFilePath);
+	}
 
 	/**
 	 * classify the Instance
@@ -113,7 +113,7 @@ class HarClassifier {
 		mClassifier = new FilteredClassifier();
 		mClassifier.setClassifier(cls);
 		setFilter(mClassifier);
-        return mClassifier != null;
+		return mClassifier != null;
 	}
 
 	/**
@@ -125,11 +125,11 @@ class HarClassifier {
 		Classifier cls = null;
 		try {
 			cls = (Classifier) SerializationHelper.read(filepath);
-	        LogUtil.info("HarLib - HarClassifier - Load Classifier Success: " + filepath);
+			LogUtil.info("HarLib - HarClassifier - Load Classifier Success: " + filepath);
 		} catch (Exception e) {
-            LogUtil.err("HarLib - HarClassifier - Load Classifier  Fails");
-            e.printStackTrace();
-            return null;
+			LogUtil.err("HarLib - HarClassifier - Load Classifier  Fails");
+			e.printStackTrace();
+			return null;
 		}
 		return cls;
 	}
@@ -144,11 +144,11 @@ class HarClassifier {
 		InputStream is = mContext.getResources().openRawResource(rawid);
 		try {
 			cls = (Classifier) SerializationHelper.read(is);
-	        LogUtil.info("HarLib - HarClassifier - Load Classifier Success");
+			LogUtil.info("HarLib - HarClassifier - Load Classifier Success");
 		} catch (Exception e) {
-	        LogUtil.err("HarLib - HarClassifier - Load Classifier Fails");
-            e.printStackTrace();
-            return null;
+			LogUtil.err("HarLib - HarClassifier - Load Classifier Fails");
+			e.printStackTrace();
+			return null;
 		}
 		return cls;
 	}

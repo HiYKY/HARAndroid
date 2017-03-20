@@ -27,7 +27,7 @@ public class FeatureInstances {
 	/**
 	 * constructor
 	 * @param context Context
-     */
+	 */
 	public FeatureInstances(Context context) {
 		loadHeadARFF(context);
 	}
@@ -35,7 +35,7 @@ public class FeatureInstances {
 	/**
 	 * load head.arff file, which is contain the struct of data set
 	 * @param context Context
-     */
+	 */
 	public void loadHeadARFF(Context context) {
 		InputStream is = context.getResources().openRawResource(R.raw.head);
 		DataSource datasource = new DataSource(is);	
@@ -59,7 +59,7 @@ public class FeatureInstances {
 	 * save instances to arff file
 	 * @param filename filename to save
 	 * @throws IOException
-     */
+	 */
 	public void saveToARFF(String filename) throws IOException {
 		ArffSaver saver = new ArffSaver();
 		saver.setInstances(mInstances);
@@ -92,7 +92,7 @@ public class FeatureInstances {
 	 * get the index of target class(activity), this is define in ARFF files
 	 * @param classValue activity
 	 * @return index
-     */
+	 */
 	public int indexOfClassValue(String classValue) {
 		return mInstances.classAttribute().indexOfValue(classValue);
 	}
@@ -101,7 +101,7 @@ public class FeatureInstances {
 	 *	get the target class(activity) on index, this is define in ARFF files
 	 * @param index
 	 * @return target class(activity)
-     */
+	 */
 	public String classValueOf(int index) {
 		return mInstances.classAttribute().value(index);
 	}
@@ -110,7 +110,7 @@ public class FeatureInstances {
 	 * parse Instance from String
 	 * @param strLine String Line
 	 * @return Instance
-     */
+	 */
 	public DenseInstance parseInstance(String strLine) {
 		double[] vals = new double[mInstances.numAttributes()];
 		String ss[] = strLine.split(",");
@@ -132,7 +132,7 @@ public class FeatureInstances {
 	 * parse Instance from TupleFeature
 	 * @param tupleFeature TupleFeature
 	 * @return Instance
-     */
+	 */
 	public DenseInstance parseInstance(TupleFeature tupleFeature) {
 		double[] vals = new double[mInstances.numAttributes()];
 		//set 0 user id

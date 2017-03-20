@@ -141,8 +141,8 @@ public class HumanActivity implements Serializable, Parcelable {
 		dest.writeSerializable(mInstance);
 	}
 	
-    public static final Parcelable.Creator<HumanActivity> CREATOR 
-    	= new Parcelable.Creator<HumanActivity>() {
+	public static final Parcelable.Creator<HumanActivity> CREATOR 
+		= new Parcelable.Creator<HumanActivity>() {
 
 			@Override
 			public HumanActivity createFromParcel(Parcel source) {
@@ -153,13 +153,13 @@ public class HumanActivity implements Serializable, Parcelable {
 			public HumanActivity[] newArray(int size) {
 				return new HumanActivity[size];
 			}
-    };
-    
-    private HumanActivity(Parcel in) {
+		};
+
+	private HumanActivity(Parcel in) {
 		mUerid = in.readInt();
 		mStartTime = in.readLong();
 		mActivity = in.readString();
 		mLabeledRight = (boolean) in.readValue(null);
 		mInstance = (DenseInstance) in.readSerializable();
-    }
+	}
 }

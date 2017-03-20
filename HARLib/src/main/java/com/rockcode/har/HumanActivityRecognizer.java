@@ -86,8 +86,8 @@ public class HumanActivityRecognizer {
 	 * @param context Context
 	 * @param isKeepWake would HarLib hold the wake lock
 	 * @param runningMode har running mode, current has two mode: CLASSIFY and COLLECT
-     * @param harDataListener har data listener
-     */
+	 * @param harDataListener har data listener
+	 */
 	public HumanActivityRecognizer(Context context, boolean isKeepWake, HarMode runningMode,
 			HarDataListener harDataListener) {
 		mContext = context;
@@ -168,7 +168,7 @@ public class HumanActivityRecognizer {
 	/**
 	 * use to label the raw data on COLLECT running mode
 	 * @param activity Activity Value(String): NoLabel, Walking, Jogging, Cycling, Stairs, Standing
-     */
+	 */
 	public void setLabelActivity(String activity) {
 		mSensorDataCollector.setLabelActivity(activity);
 	}
