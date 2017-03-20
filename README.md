@@ -71,14 +71,6 @@ The Usage of HARLib is easy, You can simply create instance of this class and ca
 ## HARDemo
 
 This is an demo project for HARLib, you can down app [here](https://fir.im/hardemo)
-Here are some screenshot of HARDemp
-![HARDemo_classify_mode_01](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_01.png)
-![HARDemo_classify_mode_02](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_02.png)
-![HARDemo_classify_mode_03](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_03.png)
-![HARDemo_collect_mode_04](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_04.png)
-![HARDemo_collect_mode_05](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_05.png)
-![HARDemo_collect_mode_06](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_06.png)
-
 
 ## Reference
 - http://www.cis.fordham.edu/wisdm/
