@@ -24,7 +24,64 @@ Classifier will process the Instance, then give an classify result. The Classifi
 The default Classifier use Decision Tree J48 algorithm, it has pretty good performance. If you need to try another algorithm, you can pass the path of your classifier model file as parameter
 into the constructor of HumanActivityRecognizer.
 
+### Usage of HARLib
+
+#### Library Dependencies
+
+you can download lastest library at [release page](https://github.com/yhcvb/HARAndroid/releases)
+And then add these to you build.gradle
+
+```
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+	compile(name: 'HARLib-release', ext: 'aar')
+    compile(name: 'WekaAndroid-release', ext: 'aar')
+}
+```
+
+#### Sample Code
+
+The Usage of HARLib is easy, You can simply create instance of this class and call start() method, then will get recognition result in listener.
+```
+    HumanActivityRecognizer mHAR;
+
+	private void initHAR() {
+		mHAR = new HumanActivityRecognizer(context, true, HarMode.CLASSIFY, mHarDataListener);
+		mHAR.start();
+	}
+
+	private HarDataListener mHarDataListener = new HarDataListener() {
+		@Override
+		public void onHarDataChange(HumanActivity ha) {
+		    // recognition result
+        }
+
+		@Override
+		public void onHarRawDataChange(List<RawData> rawDataList) {
+		    // raw sensor data
+        }
+	};
+```
+
+## HARDemo
+
+This is an demo project for HARLib, you can down app [here](https://fir.im/hardemo)
+Here are some screenshot of HARDemp
+![HARDemo_classify_mode_01](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_01.png)
+![HARDemo_classify_mode_02](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_02.png)
+![HARDemo_classify_mode_03](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_03.png)
+![HARDemo_collect_mode_04](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_04.png)
+![HARDemo_collect_mode_05](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_05.png)
+![HARDemo_collect_mode_06](https://github.com/yhcvb/HARAndroid/blob/develop/images/HARDemo_06.png)
+
+
 ## Reference
 - http://www.cis.fordham.edu/wisdm/
 - http://www.cs.waikato.ac.nz/ml/weka/
 - https://github.com/Shookit/android-ml-weka
+
