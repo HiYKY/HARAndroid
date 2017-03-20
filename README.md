@@ -48,7 +48,7 @@ dependencies {
 
 The Usage of HARLib is easy, You can simply create instance of this class and call start() method, then will get recognition result in listener.
 ```
-    HumanActivityRecognizer mHAR;
+	HumanActivityRecognizer mHAR;
 
 	private void initHAR() {
 		mHAR = new HumanActivityRecognizer(context, true, HarMode.CLASSIFY, mHarDataListener);
@@ -58,13 +58,13 @@ The Usage of HARLib is easy, You can simply create instance of this class and ca
 	private HarDataListener mHarDataListener = new HarDataListener() {
 		@Override
 		public void onHarDataChange(HumanActivity ha) {
-		    // recognition result
-        }
+			// recognition result
+		}
 
 		@Override
 		public void onHarRawDataChange(List<RawData> rawDataList) {
-		    // raw sensor data
-        }
+			// raw sensor data
+		}
 	};
 ```
 
